@@ -80,4 +80,5 @@ SELECT `customers`.`name` AS `customer-name`,
 SUM(`orders`.`amount`) as `total_amount` 
 FROM `customers`, `orders`
 WHERE  `orders`.`customers_id` = `customers`.`id`
-GROUP BY `customers`.`name`;
+GROUP BY `customers`.`name`
+ORDER BY `customers`.`name` DESC;
